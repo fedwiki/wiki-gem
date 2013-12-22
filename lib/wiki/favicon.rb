@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'png'
 
 class Favicon
