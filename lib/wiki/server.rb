@@ -20,7 +20,6 @@ require 'openid/store/filesystem'
 
 class Controller < Sinatra::Base
   set :port, 1111
-  # set :public, File.join(APP_ROOT, "client")
   set :public_folder, File.join(SINATRA_ROOT, "views/client")
   set :views , File.join(SINATRA_ROOT, "views")
   set :haml, :format => :html5
