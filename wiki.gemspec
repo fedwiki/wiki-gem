@@ -22,5 +22,14 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'thin'
   spec.add_runtime_dependency 'png'
   spec.add_runtime_dependency 'openid'
+  spec.add_runtime_dependency 'haml'
+  spec.add_runtime_dependency 'sass'
+  spec.add_runtime_dependency 'json'
+  spec.add_runtime_dependency 'RubyInline'
+  spec.add_runtime_dependency 'ZenTest'
+  spec.add_runtime_dependency 'rest-client'
+  spec.add_runtime_dependency 'ruby-openid'
+  spec.add_runtime_dependency 'couchrest'
+  spec.add_runtime_dependency 'memcache-client'
 
 end
