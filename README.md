@@ -1,6 +1,7 @@
 # Wiki
 
-TODO: Write a gem description
+Wiki is a Federated Wiki implementation in Ruby. You can learn more about the
+Federated Wiki project here: http://wardcunningham.github.io/
 
 ## Installation
 
@@ -18,7 +19,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+rackup lib/wiki/config.ru
+```
 
 ## Contributing
 
@@ -27,8 +30,3 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-=======
-wiki-gem
-========
-
-Federated Wiki Server as a Ruby Gem
