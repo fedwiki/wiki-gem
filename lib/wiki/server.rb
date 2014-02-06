@@ -20,7 +20,7 @@ require 'openid/store/filesystem'
 
 class Controller < Sinatra::Base
   set :port, 1111
-  set :public_folder, File.join(SINATRA_ROOT, "views/client")
+  set :public_folder, File.join(APP_ROOT, "node_modules/wiki-client/client")
   set :views , File.join(SINATRA_ROOT, "views")
   set :haml, :format => :html5
   set :versions, `git log -10 --oneline` || "no git log"
