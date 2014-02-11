@@ -17,6 +17,11 @@ Or install it yourself as:
 
     $ gem install wiki
 
+After installing the gem you will need to get the javascript assets with npm:
+```
+npm install
+```
+
 ## Usage
 
 ```
