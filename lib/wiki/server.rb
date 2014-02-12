@@ -43,7 +43,7 @@ class Controller < Sinatra::Base
     page = Page.new
     page.directory = File.join data_dir(site), "pages"
     page.default_directory = File.join APP_ROOT, "default-data", "pages"
-    page.plugins_directory = File.join APP_ROOT, "client", "plugins"
+    page.plugins_directory = File.join APP_ROOT, "node_modules"
     Store.mkdir page.directory
     page
   end
@@ -63,6 +63,10 @@ class Controller < Sinatra::Base
     real_path = File.join farm_status, "local-identity"
     id_data = Store.get_hash real_path
     id_data ||= Store.put_hash(real_path, FileStore.get_hash(default_path))
+  end
+
+  get /\/plugins\/(.*?)\/(.*)/ do |plugin, file|
+    send_file File.join(APP_ROOT, "node_modules/wiki-plugin-#{plugin}/client", file)
   end
 
   post "/logout" do
