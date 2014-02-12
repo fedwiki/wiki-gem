@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.name          = "wiki"
   spec.platform      = Gem::Platform::RUBY
   spec.version       = Wiki::VERSION
-  spec.authors       = ["Ward Cunningham", "Daniel Stark"]
-  spec.email         = ["ward@c2.com", "daniel@studiostark.com"]
+  spec.authors       = ["Ward Cunningham", "Jonan Scheffler", "Daniel Stark"]
+  spec.email         = ["ward@c2.com", "jonanscheffler@gmail.com", "daniel@studiostark.com"]
   spec.summary   = %q{A Federated Wiki Server}
   spec.description       = %q{Wiki is a single-page application for browsing and editing content distributed throughout a federation of similar creative-commons licensed sites. What is a federated wiki, and why does federation matter? Authors throughout the federation pull content towards themselves as they edit. With this package authors publish their own edits back to the federation as they edit.}
   spec.homepage      = "http://fed.wiki.org"
