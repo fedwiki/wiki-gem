@@ -16,13 +16,10 @@ class Page
     attr_accessor :plugins_directory
 
     def plugin_page_path name
-      Dir.glob(File.join(plugins_directory, '*/pages')) do |dir|
-        probe = "#{dir}/#{name}"
-        return probe if File.exists? probe
+      if pages = Dir.glob(File.join(plugins_directory, 'wiki-plugin-*', 'pages', name))
+        return pages.first
       end
-      return nil
     end
-
 
     # Get a page
     #
@@ -39,7 +36,7 @@ class Page
         FileStore.get_page(default_path)
       elsif (path = plugin_page_path name)
         page = FileStore.get_page(path)
-        page['plugin'] = path.match(/plugins\/(.*?)\/pages/)[1]
+        page['plugin'] = path.match(/#{self.plugins_directory}\/wiki-plugin-(.*?)\/pages/)[1]
         page
       else
         halt 404
